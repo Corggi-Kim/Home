@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>홈 페이지</title>
+  <style>
+    :root {
+      --bg: #f7f9fb;
+      --card: #ffffff;
+      --text: #1f2933;
+      --muted: #52606d;
+      --accent: #4f46e5;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Pretendard", "Noto Sans KR", system-ui, -apple-system, "Segoe UI", sans-serif;
+      background: radial-gradient(circle at 20% 20%, rgba(79, 70, 229, 0.05), transparent 30%),
+                  radial-gradient(circle at 80% 10%, rgba(236, 72, 153, 0.05), transparent 30%),
+                  var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      min-height: 100vh;
+    }
+
+    header {
+      padding: 48px 24px 32px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: clamp(32px, 4vw, 42px);
+      letter-spacing: -0.5px;
+    }
+
+    header p {
+      margin: 12px auto 0;
+      max-width: 720px;
+      color: var(--muted);
+      font-size: 18px;
+    }
+
+    main {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 24px 64px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: var(--card);
+      padding: 24px;
+      border-radius: 16px;
+      box-shadow: 0 20px 60px rgba(31, 41, 55, 0.06);
+      border: 1px solid rgba(82, 96, 109, 0.08);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 24px 70px rgba(79, 70, 229, 0.12);
+    }
+
+    .card h2 {
+      margin: 0 0 8px;
+      font-size: 20px;
+      letter-spacing: -0.2px;
+    }
+
+    .card p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .cta {
+      margin: 16px 0 0;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--accent);
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .cta svg {
+      width: 18px;
+      height: 18px;
+      transition: transform 0.15s ease;
+    }
+
+    .cta:hover svg {
+      transform: translateX(4px);
+    }
+
+    footer {
+      padding: 24px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>환영합니다!</h1>
+    <p>깔끔한 기본 메인 페이지 예시입니다. 필요한 내용을 여기에 자유롭게 추가하세요.</p>
+  </header>
+
+  <main>
+    <article class="card">
+      <h2>소개</h2>
+      <p>프로젝트나 서비스를 간단히 소개하는 섹션입니다. 핵심 가치와 목표를 강조해보세요.</p>
+      <a class="cta" href="#">
+        더 알아보기
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M5 12h14" />
+          <path d="m13 5 7 7-7 7" />
+        </svg>
+      </a>
+    </article>
+
+    <article class="card">
+      <h2>특징</h2>
+      <p>주요 기능이나 특징을 간단히 나열합니다. 명확한 소제목으로 방문자의 이해를 돕습니다.</p>
+      <a class="cta" href="#">시작하기
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M5 12h14" />
+          <path d="m13 5 7 7-7 7" />
+        </svg>
+      </a>
+    </article>
+
+    <article class="card">
+      <h2>연락처</h2>
+      <p>문의나 협업 제안을 받을 수 있는 연락처 정보를 제공합니다. 이메일, SNS, 폼 링크 등을 추가하세요.</p>
+      <a class="cta" href="#">문의하기
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M5 12h14" />
+          <path d="m13 5 7 7-7 7" />
+        </svg>
+      </a>
+    </article>
+  </main>
+
+  <footer>
+    © 2024 예시 페이지. 모든 권리 보유.
+  </footer>
+</body>
+</html>
