@@ -1,0 +1,123 @@
+:root {
+  --bg: #f7f9fb;
+  --card: #ffffff;
+  --text: #1f2933;
+  --muted: #52606d;
+  --accent: #4f46e5;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Pretendard", "Noto Sans KR", system-ui, -apple-system, "Segoe UI", sans-serif;
+  background: radial-gradient(circle at 20% 20%, rgba(79, 70, 229, 0.05), transparent 30%),
+              radial-gradient(circle at 80% 10%, rgba(236, 72, 153, 0.05), transparent 30%),
+              var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  padding: 48px 24px 32px;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: clamp(32px, 4vw, 42px);
+  letter-spacing: -0.5px;
+}
+
+header p {
+  margin: 12px auto 0;
+  max-width: 720px;
+  color: var(--muted);
+  font-size: 18px;
+}
+
+main {
+  flex: 1 0 auto;
+  max-width: 1100px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 24px 64px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: var(--card);
+  padding: 24px;
+  border-radius: 16px;
+  box-shadow: 0 20px 60px rgba(31, 41, 55, 0.06);
+  border: 1px solid rgba(82, 96, 109, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 24px 70px rgba(79, 70, 229, 0.12);
+  border-color: rgba(79, 70, 229, 0.25);
+}
+
+.card h2 {
+  margin: 0 0 8px;
+  font-size: 20px;
+  letter-spacing: -0.2px;
+}
+
+.card p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.cta {
+  margin: 16px 0 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--accent);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.cta svg {
+  width: 18px;
+  height: 18px;
+  transition: transform 0.15s ease;
+}
+
+.cta:hover svg {
+  transform: translateX(4px);
+}
+
+footer {
+  flex-shrink: 0;
+  padding: 24px;
+  text-align: center;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+footer nav {
+  display: inline-flex;
+  gap: 12px;
+  margin-left: 12px;
+}
+
+footer nav a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+footer nav a:hover {
+  text-decoration: underline;
+}
